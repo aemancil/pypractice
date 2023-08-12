@@ -1,0 +1,5 @@
+print('Today is 8/5/2023')
+print('I feel motivated but still no job ^^; .. I\'m trying my hardest so I\'ll just continue studying for now..')
+print('I want to be able to write some python programs along with Javascript and React Native web/mobile applications<3')
+print('Older me, pleaseee don\'t give up.. I know it may seem difficult but I believe in you. I don\'t know where this is coming from, realistically but we made it this far haven\'t we?')
+print('💖')
