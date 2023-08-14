@@ -244,4 +244,99 @@ print(first_name)
 print(last_name)
 print(last_ch)
 
+#function
 
+def hello(name,l_name,age):
+    print("hello "+name+ " " +l_name)
+    print("have a nice day")
+    print("you are "+str(age)+" ages old")
+
+hello("elaine","kitty",24)
+
+#return statement-function send python values/object back to the caller
+
+def multiply(num1,num2):
+    result=num1*num2
+    return result
+
+x=multiply(1,3)
+print(x)
+
+#keyword arguments- arguments precede by an identifier when we pass them to a function
+
+def hello(first,middle,last):
+    print("Hello "+first+" "+middle+ " "+last)
+
+hello(last="elaine",first="kitty",middle="kat")
+
+#nested function calls-function calls inside other function calls
+
+# num = input("Enter a positive num: ")
+# num = float(num)
+# num = abs(num)
+# num = round(num)
+# print(num)
+
+print(round(abs(float((input("Enter a whole positive number: "))))))
+
+#scope -region that a variable is recognized
+#LEGB rule variables- local, enclosing, global,built in
+name = "kitty" #global scope
+
+def display_name():
+    name="elaine" #variable with local scope inside the function
+    print(name)
+
+print(name)
+display_name()
+
+#args- parameter that will pack all arguments into a tuple
+
+def add(*args):
+    sum=0
+    args = list(args)
+    args[0] = 0
+    for i in args:
+        sum+=i
+    return sum
+
+print(add(1,2,8,5,6))
+
+#**kwargs-parameter that will pack all args into a dict
+
+def hello(**kwargs):
+    # print("hello "+kwargs['first']+" "+kwargs['last'])
+    print("hello",end=" ")
+    for key,value in kwargs.items():
+        print(value,end=" ")
+
+hello(first="elaine",middle="kitty",last="kat")
+
+#format method = str.format()
+animal="kitty"
+item="moon"
+# #print("The "+animal+" jumped over the "+item)
+# print("The {} jumped over the {}".format(animal,item))
+# print("The {1} jumped over the {0}".format(animal,item)) #positional argument
+#print("The {animal} jumped over the {item}".format(animal="kitty",item="moon")) #keyword argument
+
+name = "elaine"
+
+text="The {} jumped over the {}"
+print(text.format(animal,item))
+
+print("hello, my name is {}".format(name))
+print("hello, my name is {:10}. Nice to meet you".format(name))
+print("hello, may name is {:<10}. Nice to meet you".format(name))
+print("hello, may name is {:>10}. Nice to meet you".format(name))
+print("hello, may name is {:^10}. Nice to meet you".format(name))
+
+number = 3.14159
+num=1000
+
+print("the number pi is {:.2f}".format(number))
+print("the number is {:,}".format(num)) # add a comma at 1000ths place
+print("the number is {:b}".format(num)) # display num as binary
+print("the number is {:o}".format(num)) # display num as octal num
+print("the number is {:X}".format(num)) # display as hexadecimal
+print("the number is {:E}".format(num)) # display as scientific notation as e or E
